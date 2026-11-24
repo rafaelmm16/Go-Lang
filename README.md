@@ -17,18 +17,28 @@ go version
 ```text
 Go-lang/
 ├── 01-introducao/
-│   ├── main.go
-│   ├── variaveis.go
-│   ├── condicoes.go
-│   ├── repeticao.go
-│   ├── funcoes.go
-│   └── calculadora.go
+│   ├── basico/
+│   │   └── main.go
+│   ├── variaveis/
+│   │   └── variaveis.go
+│   ├── condicoes/
+│   │   └── condicoes.go
+│   ├── repeticao/
+│   │   └── repeticao.go
+│   ├── funcoes/
+│   │   └── funcoes.go
+│   └── calculadora/
+│       └── calculadora.go
 ├── 02-structs-e-ponteiros/
-│   ├── struct.go
-│   └── ponteiro.go
+│   ├── struct/
+│   │   └── struct.go
+│   └── ponteiro/
+│       └── ponteiro.go
 ├── 03-oop-go/
-│   ├── metodo.go
-│   └── interfaces.go
+│   ├── metodo/
+│   │   └── metodo.go
+│   └── interfaces/
+│       └── interfaces.go
 ├── 04-get-e-api/
 │   └── api.go
 ├── 05-json/
@@ -55,30 +65,30 @@ Go-lang/
 
 ### 1. Introdução (`01-introducao/`)
 
-Fundamentos básicos da sintaxe em Go:
+Fundamentos básicos da sintaxe em Go (cada exemplo em seu próprio pacote `main`):
 
 | Arquivo | Descrição |
 | --- | --- |
-| [`main.go`](01-introducao/main.go) | Laço `for` com condição de parada (`break`) e chamada de função (`DizBomdia`) |
-| [`variaveis.go`](01-introducao/variaveis.go) | Declaração de variáveis (`var`, `:=`), constantes (`const`) e formatação com `fmt.Printf` |
-| [`condicoes.go`](01-introducao/condicoes.go) | Estruturas condicionais `if`, `else if` e `else` |
-| [`repeticao.go`](01-introducao/repeticao.go) | Laços `for` tradicionais, `for range` e uso de slices |
-| [`funcoes.go`](01-introducao/funcoes.go) | Funções com parâmetros, múltiplos retornos e escopo de variáveis |
-| [`calculadora.go`](01-introducao/calculadora.go) | Calculadora interativa via terminal usando `fmt.Scanln` e `switch` |
+| [`basico/main.go`](01-introducao/basico/main.go) | Laço `for` com condição de parada (`break`) e chamada de função (`DizBomdia`) |
+| [`variaveis/variaveis.go`](01-introducao/variaveis/variaveis.go) | Declaração de variáveis (`var`, `:=`), constantes (`const`) e formatação com `fmt.Printf` |
+| [`condicoes/condicoes.go`](01-introducao/condicoes/condicoes.go) | Estruturas condicionais `if`, `else if` e `else` |
+| [`repeticao/repeticao.go`](01-introducao/repeticao/repeticao.go) | Laços `for` tradicionais, `for range` e uso de slices |
+| [`funcoes/funcoes.go`](01-introducao/funcoes/funcoes.go) | Funções com parâmetros, múltiplos retornos e escopo de variáveis |
+| [`calculadora/calculadora.go`](01-introducao/calculadora/calculadora.go) | Calculadora interativa via terminal usando `fmt.Scanln` e `switch` |
 
 ### 2. Structs e Ponteiros (`02-structs-e-ponteiros/`)
 
 | Arquivo | Descrição |
 | --- | --- |
-| [`struct.go`](02-structs-e-ponteiros/struct.go) | Definição da struct `Pessoa`, função construtora `NewUser` e slices de structs |
-| [`ponteiro.go`](02-structs-e-ponteiros/ponteiro.go) | Passagem de ponteiros (`*int` e `&`) para alterar valores em memória na função `HappyBirth` |
+| [`struct/struct.go`](02-structs-e-ponteiros/struct/struct.go) | Definição da struct `Pessoa`, função construtora `NewUser` e slices de structs |
+| [`ponteiro/ponteiro.go`](02-structs-e-ponteiros/ponteiro/ponteiro.go) | Passagem de ponteiros (`*int` e `&`) para alterar valores em memória na função `HappyBirth` |
 
 ### 3. Orientação a Objetos em Go (`03-oop-go/`)
 
 | Arquivo | Descrição |
 | --- | --- |
-| [`metodo.go`](03-oop-go/metodo.go) | Métodos com ponteiro receptor (`*Site`) para modificar campos de uma struct |
-| [`interfaces.go`](03-oop-go/interfaces.go) | Definição e implementação da interface `Humano` com as structs `Pessoa` e `Robo` |
+| [`metodo/metodo.go`](03-oop-go/metodo/metodo.go) | Métodos com ponteiro receptor (`*Site`) para modificar campos de uma struct |
+| [`interfaces/interfaces.go`](03-oop-go/interfaces/interfaces.go) | Definição e implementação da interface `Humano` com as structs `Pessoa` e `Robo` |
 
 ### 4. Requisições HTTP e APIs (`04-get-e-api/`)
 
@@ -112,13 +122,13 @@ Aplicação interativa de terminal (TUI) construída com a biblioteca [`github.c
 
 ### Arquivos de estudo (`01-introducao` a `05-json`)
 
-Como cada diretório de estudo possui múltiplos arquivos com `package main` independentes, execute informando o caminho do arquivo desejado:
+Execute informando o diretório ou o arquivo desejado:
 
 ```bash
-go run 01-introducao/variaveis.go
-go run 01-introducao/calculadora.go
-go run 02-structs-e-ponteiros/ponteiro.go
-go run 05-json/json.go
+go run ./01-introducao/variaveis
+go run ./01-introducao/calculadora
+go run ./02-structs-e-ponteiros/ponteiro
+go run ./05-json
 ```
 
 ### Módulo `06-organizacao`
