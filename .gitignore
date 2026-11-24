@@ -1,0 +1,20 @@
+# Binários compilados (executáveis e bibliotecas)
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+
+# Binários de teste e cobertura
+*.test
+*.out
+
+# Go workspace
+go.work
+go.work.sum
+
+# Arquivos de IDE e sistema operacional
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
