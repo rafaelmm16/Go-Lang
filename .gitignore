@@ -9,8 +9,7 @@
 *.test
 *.out
 
-# Go workspace
-go.work
+# Go workspace sum
 go.work.sum
 
 # Arquivos de IDE e sistema operacional
