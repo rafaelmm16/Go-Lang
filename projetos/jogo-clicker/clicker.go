@@ -46,7 +46,7 @@ func main() {
 	go func() {
 		for {
 			time.Sleep(1 * time.Second)
-			increasePoints(points, 10, pointsLock)
+			increasePoints(&points, 10, &pointsLock)
 			app.QueueUpdateDraw(func() {
 				updatePoints()
 			})
@@ -64,8 +64,8 @@ func main() {
 	}
 }
 
-func increasePoints(points int, amount int, pointsLock sync.Mutex) {
+func increasePoints(points *int, amount int, pointsLock *sync.Mutex) {
 	pointsLock.Lock()
-	points += amount
+	*points += amount
 	pointsLock.Unlock()
 }
